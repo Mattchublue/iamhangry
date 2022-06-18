@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS newsfeed_db;
+DROP DATABASE IF EXISTS iamhangry_db;
 
-CREATE DATABASE newsfeed_db;
+CREATE DATABASE iamhangry_db;
