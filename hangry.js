@@ -7,16 +7,40 @@ const yelp = require('yelp-fusion');
 const apiKey = 'K5sDrDbpHotJIdxyNgOgVZx0xn9aQxhj3ihXnVfB98DzTqXESXuCcnmGVjT11NpiQsMRVwqvRPqfcfKtf3iWZEHhuAtWBhAj3dkwWVYobTelqSgWXb3c4fMyLvGnYnYx';
 
 const searchRequest = {
-  term:'Four Barrel Coffee',
-  location: 'san francisco, ca'
+  term:'restaurant',
+  location: 'Denver', // needs to be dynamic value from Handlebars/HTML input
+//   sort_by:"rating",
+  limit: 10
 };
 
 const client = yelp.client(apiKey);
 
+let recommendations;
 client.search(searchRequest).then(response => {
-  const firstResult = response.jsonBody.businesses[0];
-  const prettyJson = JSON.stringify(firstResult, null, 4);
-  console.log(prettyJson);
+    var drinks=2
+    if (drinks<=2){ 
+        for (var i=0; response.jsonBody.businesses.length; i++){
+            // console.log(response.jsonBody.businesses)
+            if (response.jsonBody.businesses.rating===5){
+                const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
+                console.log(prettyJson);
+            }
+        }
+       
+    }
+    else if (drinks===3){ 
+        for (var i=0; response.jsonBody.businesses.length; i++){
+            console.log(response.jsonBody.businesses[i].rating)
+            if (response.jsonBody.businesses[i].rating===3){
+                const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
+                console.log(prettyJson);
+            }
+        }
+       
+    }  
+//   const firstResult = response.jsonBody.businesses[0];
+//   const prettyJson = JSON.stringify(response.jsonBody.rating, null, 4);
+//   console.log(prettyJson);
 }).catch(e => {
   console.log(e);
 });
