@@ -10,7 +10,7 @@ const searchRequest = {
   term:'restaurant',
   location: 'Denver', // needs to be dynamic value from Handlebars/HTML input
 //   sort_by:"rating",
-  limit: 10
+  limit: 2
 };
 
 const client = yelp.client(apiKey);
@@ -19,22 +19,33 @@ let recommendations;
 client.search(searchRequest).then(response => {
     var drinks=2
     if (drinks<=2){ 
-        for (var i=0; response.jsonBody.businesses.length; i++){
-            // console.log(response.jsonBody.businesses)
-            if (response.jsonBody.businesses.rating===5){
+        for (var i=0; i<response.jsonBody.businesses.length; i++){
+            console.log(response.jsonBody.businesses[i].price)
+            if (response.jsonBody.businesses[i].price==="$$$")
+            {
                 const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
                 console.log(prettyJson);
             }
         }
-       
     }
-    else if (drinks===3){ 
-        for (var i=0; response.jsonBody.businesses.length; i++){
-            console.log(response.jsonBody.businesses[i].rating)
-            if (response.jsonBody.businesses[i].rating===3){
-                const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
-                console.log(prettyJson);
+        if (drinks=3){ 
+            for (var i=0; i<response.jsonBody.businesses.length; i++){
+                console.log(response.jsonBody.businesses[i].price)
+                if (response.jsonBody.businesses[i].price==="$$")
+                {
+                    const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
+                    console.log(prettyJson);
+                }
             }
+         if (drinks=3){ 
+            for (var i=0; i<response.jsonBody.businesses.length; i++){
+                console.log(response.jsonBody.businesses[i].price)
+                if (response.jsonBody.businesses[i].price==="$")
+                {
+                    const prettyJson = JSON.stringify(response.jsonBody.businesses[i], null, 4);
+                    console.log(prettyJson);
+                }
+            }    
         }
        
     }  
