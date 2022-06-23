@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS iamhangry_db;
+DROP DATABASE IF EXISTS drunkchies;
 
-CREATE DATABASE iamhangry_db;
+CREATE DATABASE drunkchies;
