@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
-  res.render('dashboard', { loggedIn: true });
+
 });
 
 router.get('/edit/:id', withAuth, (req, res) => {
