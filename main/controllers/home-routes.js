@@ -60,8 +60,10 @@ router.get('/post/:id', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+console.log(req.session.loggedIn)
+
   if (req.session.loggedIn) {
-    res.redirect('/login');
+    res.redirect('/dashboard');
     return;
   }
 
