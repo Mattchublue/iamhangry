@@ -1,17 +1,11 @@
-iamhangry
+iamhangry 
 
-Application uses a Node and Express back end and uses both GET and POST routes for retrieving and adding new data.
+Description:
 
-Application has a folder structure that meets the MVC paradigm and uses Handlebars.js as the template engine.
+This application utilizes the Yelp API in order to provide food solutions depending on how much you have had to drink.  The more sober you are the higher priced restaurants will be returned.  If you have drank multiple drinks then cheap eats will be returned.  The page requires a login before entering the amount of drinks and your location.
 
-Application is backed by a MySQL database with a Sequelize ORM and protects API keys and sensitive information with environment variables.
+Technologies that were used to create this were Node.js, Handlebars and MySQL.
 
-Application includes user authentication (express-session and cookies).
+Application Images:
 
-Application uses at least one new library, package, or technology not covered in class.
-
-Application deployed at live URL on Heroku and loads with no errors.
-
-Application GitHub URL submitted.
-
-Portfolio at live URL submitted, featuring project.
+Application URL:
