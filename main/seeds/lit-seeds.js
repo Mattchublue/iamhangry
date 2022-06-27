@@ -1,6 +1,6 @@
-const { Vote } = require('../models');
+const { VerifiedDrunk } = require('../models');
 
-const votedata = [
+const verifieddrunkdata = [
   {
     user_id: 9,
     post_id: 19

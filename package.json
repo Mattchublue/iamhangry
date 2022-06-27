@@ -1,5 +1,29 @@
 {
   "dependencies": {
+    "connect-session-sequelize": "^7.1.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "jest": "^28.1.1",
+    "mysql": "^2.18.1",
+    "sequelize": "^6.21.1",
     "yelp-fusion": "^3.0.0"
-  }
+  },
+  "name": "iamhangry",
+  "description": "iamhangry",
+  "version": "1.0.0",
+  "main": "hangry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattchublue/iamhangry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mattchublue/iamhangry/issues"
+  },
+  "homepage": "https://github.com/Mattchublue/iamhangry#readme"
 }
