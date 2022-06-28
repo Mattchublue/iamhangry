@@ -1,0 +1,13 @@
+<article class="post">
+      <div class="location">
+        <div>
+           {{user.username}} was in {{location}} on drink number {{num_of_drinks}}
+        </div>
+    
+      <div class="meta">
+        {{vote_count}} Lit {{format_plural "point" vote_count}} by {{user.username}}  on
+        {{ format_date created_at}}
+        |
+        <a href="/post/{{id}}">{{reviews.length}} {{format_plural "review" reviews.length}}</a>
+      </div>
+    </article>

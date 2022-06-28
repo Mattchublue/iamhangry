@@ -191,6 +191,6 @@ const verifieddrunkdata = [
   }
 ];
 
-const seedVotes = () => Vote.bulkCreate(votedata);
+const seedVotes = () => verifieddrunk.bulkCreate(votedata);
 
 module.exports = seedVotes;

@@ -7,7 +7,7 @@ const reviewdata = [
     post_id: 1
   },
   {
-    comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
+    review_text: 'its delicouss',
     user_id: 1,
     post_id: 2
   }
